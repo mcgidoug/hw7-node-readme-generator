@@ -1,4 +1,6 @@
 
+  ![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)
+  https://www.gnu.org/licenses
   ## Table of Contents:
 
   - [Installation](#installation)
@@ -10,25 +12,23 @@
 
   ## Installation:
 
-  
+  45
   
 
   ## Usage:
 
-  
+  45
 
   ## Contributors:
 
-  
+  45
 
   ## Tests:
   
-  
+  45
 
   ## Questions:
 
-  If you have any questions, please contact me through the following:
-
-- Github: 
+- Github: 45
   
-- Email: 
+- Email: 45

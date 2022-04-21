@@ -52,7 +52,7 @@ const promptUser = () => {
     },
   ]);
 };
-
+// function to generate markdown file with user answers
 function generateMarkdown({
   title,
   license,
@@ -65,6 +65,8 @@ function generateMarkdown({
   usage,
 }) {
   return `
+  ${createLicenseBadge(license)}
+  ${createLicenseLink(license)}
   ## Table of Contents:
 
   - [Installation](#installation)
@@ -93,23 +95,51 @@ function generateMarkdown({
 
   ## Questions:
 
-  If you have any questions, please contact me through the following:
-
 - Github: ${github}
   
 - Email: ${email}
 `;
 }
 
-// Bonus using writeFileSync as a promise
+// function for appending user input to markdown file
 const init = () => {
   promptUser()
-    // Use writeFileSync method to use promises instead of a callback function
     .then((answers) =>
       fs.writeFileSync("./generated.md", generateMarkdown(answers))
     )
-    .then(() => console.log("Successfully wrote to generated.md?"))
+    .then(() => console.log("Successfully wrote to generated.md"))
     .catch((err) => console.error(err));
 };
-
+// calls function to append user input to markdown file
 init();
+// function to generate license badge
+function createLicenseBadge(license) {
+  let badge = "";
+  if (license === "MIT") {
+    badge =
+      "![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)";
+  } else if (license === "Apache 2.0") {
+    badge =
+      "![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)";
+  } else if (license === "GPL v3.0") {
+    badge =
+      "![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)";
+  } else {
+    badge = "";
+  }
+  return badge;
+}
+// function to generate license link
+function createLicenseLink(license) {
+  let licenseLink = "";
+  if (license === "MIT") {
+    licenseLink = "https://choosealicense.com/licenses/mit/";
+  } else if (license === "Apache 2.0") {
+    licenseLink = "http://www.apache.org/licenses/LICENSE-2.0";
+  } else if (license === "GPL v3.0") {
+    licenseLink = "https://www.gnu.org/licenses";
+  } else {
+    licenseLink = "";
+  }
+  return licenseLink;
+}
