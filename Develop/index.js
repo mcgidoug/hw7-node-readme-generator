@@ -65,6 +65,9 @@ function generateMarkdown({
   usage,
 }) {
   return `
+  ## Project Title: 
+  ${title}
+
   ${createLicenseBadge(license)}
   ${createLicenseLink(license)}
   ## Table of Contents:

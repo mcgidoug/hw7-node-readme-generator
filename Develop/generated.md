@@ -1,6 +1,9 @@
 
-  ![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)
-  https://www.gnu.org/licenses
+  ## Project Title: 
+  Readme Generator
+
+  ![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)
+  https://choosealicense.com/licenses/mit/
   ## Table of Contents:
 
   - [Installation](#installation)
@@ -12,23 +15,23 @@
 
   ## Installation:
 
-  45
+  User must install node packages and inquirer
   
 
   ## Usage:
 
-  45
+  This program will be used to generate readme markdown files for future projects
 
   ## Contributors:
 
-  45
+  Contributers must fork and clone repo before making any contributions
 
   ## Tests:
   
-  45
+  Currently being tested in console
 
   ## Questions:
 
-- Github: 45
+- Github: mcgidoug
   
-- Email: 45
+- Email: mcgidoug
